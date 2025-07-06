@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+}
+
+body{
+    background: linear-gradient(180deg, #DD4083, #F78F1F);
+    background-size: cover;
+    height: 100vh;
+}
+header{
+    padding: 30px 0;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(180deg, #F78F1F, transparent);
+    /*background: rgb(247, 143, 31, 0.5);*/
+    position: fixed;
+    color: #601c3aac;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    margin: 30px;
+}
+
+.header h2{
+    /*margin: 15px;*/
+    color: #601c3aac;
+}
+
+.header input{
+    outline: none;
+    border: none;
+    height: 30px;
+    border-radius: 10px;
+    padding: 0.25em 2em;
+    font-size: 20px;
+    margin: 15px;
+}
+
+.header a{
+    /**outline: none;
+    border: none;
+    background: transparent;*/
+    height: 40px;
+    width: 40px;
+    /*cursor: pointer;*/
+}
+
+.header a img{
+    height: 40px;
+    width: 40px;
+}
+
+.list{
+    background: #ffffffd5;
+    width: 70%;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.list table{
+    width: 100%;
+    text-align: left;
+}
+
+.list .id{
+    width: 10%;
+}
+
+.list .name{
+    width: 40%;
+}
+
+.list .price{
+    width: 20%;
+}
+
+.list .action{
+    width: 30%;
+    text-align: center;
+}
+
+.list .btn{
+    width: 15%;
+}
+
+.btn button{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+.btn a{
+    width: 100%;
+    height: 100%;
+}
+
+.edit{
+    text-align: right;
+}
+
+.delete{
+    align-items: left;
+}
+
+.addForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.addForm h2{
+    color: #601c3aac;
+}
+
+.field{
+    margin: 10px 0;
+}
+
+.addProd{
+    background: #ffffffd5;
+    padding: 30px;
+    border-radius: 20px;
+    width: 50%;
+}
+
+.addProd label{
+    color: #601c3aac;
+    display: inline-block;
+    width: 20%;
+    font-size: 20px;
+    font-weight:bold;
+}
+
+.addProd input{
+    width: 70%;
+    outline: none;
+    border: 1px solid #aca9a9;
+    border-radius: 5px;
+    padding: 0.25em .5em;
+    font-size: 20px;
+}
+
+.actionInput{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.actionInput button{
+    margin: 0 15px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: .25em 1em;
+    border-radius: 5px;
+    color: #601c3aac;
+    font-weight: bold;
+    font-size: 15px;
+    width: 80px;
+}
+
+.actionInput .saveBtn{
+    background: rgb(113, 222, 113);
+}
+
+.actionInput .cancelBtn{
+    background: rgb(211, 153, 153);
+}
+
+.back{
+    position: fixed;
+}
