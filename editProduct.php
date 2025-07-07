@@ -50,11 +50,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="index.php" class="back">Back to Menu</a>
+    <!--<a href="index.php" class="back">Back to Menu</a>-->
     <div class="addForm">
         <h2>Edit a Product</h2>
         <form  class="addProd" method="post" action="#">
-            <?php if(isset($message)){echo $message;} ?>
             <div class="field">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" value="<?php echo $product['prodname'] ?>">
@@ -62,6 +61,9 @@
             <div class="field">
                 <label for="price">Price</label>
                 <input type="text" id="price" name="price" value="<?php echo $product['price'] ?>">
+            </div>
+            <div class="message">
+                <?php if(isset($message)){echo $message;} ?>
             </div>
             <div class="actionInput">
                 <button class="saveBtn" name="editBtn">Edit</button>

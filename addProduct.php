@@ -30,7 +30,7 @@ if(isset($_POST['saveBtn'])){
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="index.php" class="back">Back to Menu</a>
+    <!--<a href="index.php" class="back">Back to Menu</a>-->
     <div class="addForm">
         <h2>Add a Product</h2>
         <form  class="addProd" method="post" action="">

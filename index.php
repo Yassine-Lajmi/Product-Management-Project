@@ -1,12 +1,12 @@
 <?php
-     $con = mysqli_connect("localhost","root","","product management");
-    if(isset($_GET['searchBar'])){
-        $searchTerm = mysqli_real_escape_string($con, $_GET['searchBar']);
-        $query = "SELECT * FROM `product-management` WHERE prodname LIKE '%$searchTerm%'";
-    }else{
-        $query = "SELECT * FROM `product-management`";
-    }
-    $show=mysqli_query($con, $query);
+    //$con = mysqli_connect("localhost","root","","product management");
+    //if(isset($_GET['searchBar'])){
+    //    $searchTerm = mysqli_real_escape_string($con, $_GET['searchBar']);
+    //    $query = "SELECT * FROM `product-management` WHERE prodname LIKE '%$searchTerm%'";
+//    }else{
+//        $query = "SELECT * FROM `product-management`";
+//    }
+//    $show=mysqli_query($con, $query);
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +23,7 @@
         <div class="header">
             <h2>List of Products</h2>
             <form action="" method="get"> 
-                <input type="text" name="searchBar" placeholder="Search a product" value="<?php echo $searchTerm ?>" autofocus>
+                <input type="text" name="searchBar" placeholder="Search a product" autofocus>
                 <button name="searchBtn"><img src="images/searchButton.png" alt="Search" height="40px" width="40px"></button>
             </form>
             <a href="addProduct.php"><img src="images/addButton.png" alt="Add a product" height="50px" width="50px"></a>
@@ -35,9 +35,9 @@
                     $con = mysqli_connect("localhost","root","","product management");
                     $delete = mysqli_query($con, "DELETE FROM `product-management` WHERE id = '$isToDelete'");
                     if($delete){
-                        echo"<p>Product successfully deleted!</p>";
+                        echo'<p class="message">Product successfully deleted!</p>';
                     }else{
-                        echo"<p>Product not deleted!</p>";
+                        echo'<p class="message">Product not deleted!</p>';
                     }
                 }
             ?>
@@ -49,7 +49,14 @@
                     <th colspan="2" class="action">Action</th>
                 </tr>
                 <?php
-                    //$con = mysqli_connect("localhost","root","","product management");
+                    $con = mysqli_connect("localhost","root","","product management");
+                    if(isset($_GET['searchBar'])){
+                        $searchTerm = mysqli_real_escape_string($con, $_GET['searchBar']);
+                        $query = "SELECT * FROM `product-management` WHERE prodname LIKE '%$searchTerm%'";
+                    }else{
+                        $query = "SELECT * FROM `product-management`";
+                    }
+                    $show=mysqli_query($con, $query);
                     //$show = mysqli_query($con, "SELECT * FROM `product-management`");
                     if(mysqli_num_rows($show) == 0){
                         echo'<tr><td colspan="5">No Products available</td></tr>';
