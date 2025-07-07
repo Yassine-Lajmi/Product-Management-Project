@@ -15,6 +15,18 @@
             <a href="addProduct.php"><img src="images/addButton.png" alt="Add a product" height="50px" width="50px"></a>
         </div>
         <div class="list">
+            <?php
+                if(isset($_POST['deleteBtn'])){
+                    $isToDelete = $_POST['deleteName'];
+                    $con = mysqli_connect("localhost","root","","product management");
+                    $delete = mysqli_query($con, "DELETE FROM `product-management` WHERE prodname = '$isToDelete'");
+                    if($delete){
+                        echo"<p>Product successfully deleted!</p>";
+                    }else{
+                        echo"<p>Product not deleted!</p>";
+                    }
+                }
+            ?>
             <table>
                 <tr>
                     <th class="id">Id</th>
@@ -35,7 +47,7 @@
                             <td class="name">'.$row['prodname'].'</td>
                             <td class="price">'.$row['price'].'</td>
                             <td class="btn edit"><a href="editProduct.php"><img src="images/editButton.png" alt="Edit product" height="40px" width="40px"></a></td>
-                            <td class="btn delete"><button><img src="images/deleteButton.png" alt="Delete product" height="40px" width="40px"></button></td>
+                            <td class="btn delete"><form method="post" action=""><input type="hidden" name="deleteName" value="'.$row['prodname'].'"><button name="deleteBtn"><img src="images/deleteButton.png" alt="Delete product" height="40px" width="40px"></button></form></td>
                         </tr>'; 
                         }
                     }
