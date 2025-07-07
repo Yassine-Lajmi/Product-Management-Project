@@ -46,7 +46,7 @@
                             <td class="id">'.$row['id'].'</td>
                             <td class="name">'.$row['prodname'].'</td>
                             <td class="price">'.$row['price'].'</td>
-                            <td class="btn edit"><a href="editProduct.php"><img src="images/editButton.png" alt="Edit product" height="40px" width="40px"></a></td>
+                            <td class="btn edit"><a href="editProduct.php?name='.$row['prodname'].'"><img src="images/editButton.png" alt="Edit product" height="40px" width="40px"></a></td>
                             <td class="btn delete"><form method="post" action=""><input type="hidden" name="deleteName" value="'.$row['prodname'].'"><button name="deleteBtn"><img src="images/deleteButton.png" alt="Delete product" height="40px" width="40px"></button></form></td>
                         </tr>'; 
                         }
