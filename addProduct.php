@@ -10,7 +10,6 @@ if(isset($_POST['saveBtn'])){
         }else{
             $save = mysqli_query($con, "INSERT INTO `product-management` VALUES(0,'$name','$price')");
             if($save){
-                //$message = '<p>Product Added successfully!</p>';
                 header("Location: index.php");
             }else{
                 $message = '<p>Product not Added!</p>';
@@ -30,7 +29,6 @@ if(isset($_POST['saveBtn'])){
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--<a href="index.php" class="back">Back to Menu</a>-->
     <div class="addForm">
         <h2>Add a Product</h2>
         <form  class="addProd" method="post" action="">

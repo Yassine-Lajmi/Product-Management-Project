@@ -22,7 +22,6 @@
                 }else{   
                     $edit = mysqli_query($con, "UPDATE `product-management` SET prodname='$newName', price='$newPrice' WHERE id='$isToEdit'");
                     if($edit){
-                        //$message="Product Updated successfully!";
                         header("Location: index.php");
                     }else{
                         $message="Failed to update product!";
@@ -31,7 +30,6 @@
             }else{   
                 $edit = mysqli_query($con, "UPDATE `product-management` SET prodname='$newName', price='$newPrice' WHERE id='$isToEdit'");
                 if($edit){
-                    //$message="Product Updated successfully!";
                     header("Location: index.php");
                 }else{
                     $message="Failed to update product!";
@@ -50,7 +48,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--<a href="index.php" class="back">Back to Menu</a>-->
     <div class="addForm">
         <h2>Edit a Product</h2>
         <form  class="addProd" method="post" action="#">

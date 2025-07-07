@@ -1,14 +1,3 @@
-<?php
-    //$con = mysqli_connect("localhost","root","","product management");
-    //if(isset($_GET['searchBar'])){
-    //    $searchTerm = mysqli_real_escape_string($con, $_GET['searchBar']);
-    //    $query = "SELECT * FROM `product-management` WHERE prodname LIKE '%$searchTerm%'";
-//    }else{
-//        $query = "SELECT * FROM `product-management`";
-//    }
-//    $show=mysqli_query($con, $query);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,7 +46,6 @@
                         $query = "SELECT * FROM `product-management`";
                     }
                     $show=mysqli_query($con, $query);
-                    //$show = mysqli_query($con, "SELECT * FROM `product-management`");
                     if(mysqli_num_rows($show) == 0){
                         echo'<tr><td colspan="5">No Products available</td></tr>';
                     }else{
