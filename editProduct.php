@@ -1,8 +1,8 @@
 <?php
     $con = mysqli_connect("localhost","root","","product management");
-    if(isset($_GET['name'])){
-        $isToEdit = $_GET['name'];
-        $result = mysqli_query($con, "SELECT * FROM `product-management` WHERE prodname = '$isToEdit'");
+    if(isset($_GET['id'])){
+        $isToEdit = $_GET['id'];
+        $result = mysqli_query($con, "SELECT * FROM `product-management` WHERE id = '$isToEdit'");
         if (mysqli_num_rows($result) > 0){
         $product = mysqli_fetch_assoc($result);
         }else{
@@ -20,7 +20,7 @@
                 if (mysqli_num_rows($verif) > 0){
                     $message = '<p>Product exists already!</p>';
                 }else{   
-                    $edit = mysqli_query($con, "UPDATE `product-management` SET prodname='$newName', price='$newPrice' WHERE prodname='$isToEdit'");
+                    $edit = mysqli_query($con, "UPDATE `product-management` SET prodname='$newName', price='$newPrice' WHERE id='$isToEdit'");
                     if($edit){
                         //$message="Product Updated successfully!";
                         header("Location: index.php");
@@ -29,7 +29,7 @@
                     }
                 }
             }else{   
-                $edit = mysqli_query($con, "UPDATE `product-management` SET prodname='$newName', price='$newPrice' WHERE prodname='$isToEdit'");
+                $edit = mysqli_query($con, "UPDATE `product-management` SET prodname='$newName', price='$newPrice' WHERE id='$isToEdit'");
                 if($edit){
                     //$message="Product Updated successfully!";
                     header("Location: index.php");
