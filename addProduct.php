@@ -10,7 +10,8 @@ if(isset($_POST['saveBtn'])){
         }else{
             $save = mysqli_query($con, "INSERT INTO `product-management` VALUES(0,'$name','$price')");
             if($save){
-                $message = '<p>Product Added successfully!</p>';
+                //$message = '<p>Product Added successfully!</p>';
+                header("Location: index.php");
             }else{
                 $message = '<p>Product not Added!</p>';
             }
