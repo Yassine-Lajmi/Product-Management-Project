@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="index.html" class="back">Back to Menu</a>
+    <a href="index.php" class="back">Back to Menu</a>
     <div class="addForm">
         <h2>Edit a Product</h2>
         <form  class="addProd" action="#">
