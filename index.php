@@ -13,7 +13,7 @@
             <h2>List of Products</h2>
             <form action="" method="get"> 
                 <input type="text" name="searchBar" placeholder="Search a product" autofocus>
-                <button name="searchBtn"><img src="images/searchButton.png" alt="Search" height="40px" width="40px"></button>
+                <button name="searchBtn"><img src="images/searchButton.png" alt="Search" height="25px" width="25px"></button>
             </form>
             <a href="addProduct.php"><img src="images/addButton.png" alt="Add a product" height="50px" width="50px"></a>
         </div>
